@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-ibrahima",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "@splinetool/runtime": "^0.9.75",
+    "@waaark/luge": "^0.6.9-beta"
+  }
+}
