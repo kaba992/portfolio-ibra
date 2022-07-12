@@ -16,7 +16,7 @@
 body {
 	width: 100vw;
 	height: 100vh;
-	color: #fff;
+	color: #dfd3c3;
 	background-color: #161616;
 	font-family: "Inter", sans-serif;
 }
@@ -61,6 +61,16 @@ canvas {
 	width: 100% !important;
 	height: 100% !important;
 	z-index: 1;
+}
+
+#canvas3d-2 {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100% !important;
+	height: 100% !important;
+  z-index: 1;
 }
 
 .footer-left {
@@ -138,7 +148,7 @@ canvas {
 .line-home {
 	width: 2px;
 	height: 15vh;
-	background-color: #fff;
+	background-color: #dfd3c3;;
 	margin-top: 1rem;
 }
 
@@ -477,7 +487,7 @@ canvas {
 .project-header-content p {
 	font-size: 3vw;
 	font-weight: 700;
-	font-family: "Grandstander", cursive;
+	font-family: "Inter", sans-serif;
 	color: #161616;
 	margin-bottom: 1rem;
 }
@@ -519,9 +529,9 @@ canvas {
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-direction: column;
+	width: 30%;
 	margin-left: 10%;
 }
-
 
 .project-role-right {
 	display: flex;
@@ -576,9 +586,15 @@ canvas {
 	display: block;
 	margin: 2rem auto;
 }
+.project-img-wrapper-neghborfood video {
+	width: 20%;
+	height: 812px;
+	display: block;
+	margin: 2rem auto;
+}
 
-.project-img-wrapper-neghborfood p{
-  font-size: 1.5vw;
+.project-img-wrapper-neghborfood p {
+	font-size: 1.5vw;
 	font-weight: 700;
 	color: rgb(223, 211, 195);
 	margin-top: 1rem;
@@ -605,21 +621,50 @@ canvas {
 	margin-top: 1rem;
 	text-align: center;
 }
+
+#contact {
+	height: 100%;
+	width: 100%;
+}
+
+.contact-content {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+
+}
+.contact-content h1 {
+  font-size: 8vw;
+  font-weight: 900;
+  margin-left: 6%;
+  z-index: 2;
+}
+.contact-content p {
+  font-size: 1.5vw;
+  margin-left: 6%;
+  z-index: 2;
+}
+.mail{
+  text-decoration: underline;
+}
 /* Luger */
 
 .lg-cursor .lg-cursor-pointer:nth-child(1):before {
-	margin: -15px 0 0 -15px;
-	width: 30px;
-	height: 30px;
+	margin: -20px 0 0 -20px;
+	width: 40px;
+	height: 40px;
 	background: rgba(0, 255, 255, 0.25);
 }
 
 .lg-cursor .lg-cursor-pointer:nth-child(2):before {
-	background-color: white;
+	background-color: white !important;
 }
 
 .lg-cursor .lg-cursor-trail path {
-	stroke-width: 8px;
+	stroke-width: 8px !important;
 }
 
 .lg-preloader {
@@ -635,7 +680,7 @@ canvas {
 	display: block;
 	position: relative;
 	width: 200px;
-	z-index: 99;
+	z-index: 999;
 }
 
 .lg-preloader .is-hidden {

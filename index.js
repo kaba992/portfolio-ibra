@@ -1,4 +1,5 @@
 import { gsap } from "gsap";
+
 console.log(gsap);
 const project = document.querySelectorAll('.project-item');
 const projectImg = document.querySelector('.projects-img');
