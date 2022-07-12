@@ -1,26 +1,41 @@
-// import { gsap, Back, Expo } from "gsap";
-// // gsap.registerPlugin(ScrollTrigger);
-// console.log(gsap);
-// import LocomotiveScroll from 'locomotive-scroll';
+import { gsap, Back, Expo } from "gsap";
+// gsap.registerPlugin(ScrollTrigger);
+console.log(gsap);
+import LocomotiveScroll from 'locomotive-scroll';
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true,
+  multiplier: 0.75
 
-// const scroll = new LocomotiveScroll({
-//   el: document.querySelector('[data-scroll-container]'),
-//   smooth: true,
-//   multiplier: 1.5
+});
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   console.log("dom loaded");
+
+
+//   function ScrollUpdateDelay() {
+//     setTimeout(function () {
+//       console.log("scroll update");
+//       scroll.update();
+//     }, 500);
+
+//   }
+
+//   ScrollUpdateDelay();
 // });
-// console.log(scroll);
+
+new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"))
 // const TL = gsap.timeline();
-// TL.set(".bottom-to-top", { y: 120 });
+// TL.set(".front-top-line", { width: 0 });
 
-// TL.to(".bottom-to-top", {
-//   scrollTrigger: {
-//     trigger: ".bottom-to-top",
-//     start: "top 75%",
-//     end: "bottom 25%",
-//   },
+// TL.to(".front-top-line", {
+
 //   duration: 1,
-//   y: 0,
-//   ease: Back.easeOut
-
+//   width: "100%",
+//   ease: Back.easeOut,
+//   scrollTrigger: {
+//     trigger: ".front-top-line",
+//     markers: true
+//   },
 
 // });

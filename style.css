@@ -14,10 +14,10 @@
 }
 
 body {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	color: #dfd3c3;
-	background-color: #161616;
+	background-color: #1c1a1a;
 	font-family: "Inter", sans-serif;
 }
 
@@ -70,7 +70,7 @@ canvas {
 	transform: translate(-50%, -50%);
 	width: 100% !important;
 	height: 100% !important;
-  z-index: 1;
+	z-index: 1;
 }
 
 .footer-left {
@@ -110,15 +110,15 @@ canvas {
 }
 
 .container-fluid {
+
 	height: 100%;
 	width: 100%;
-	margin-top: 2rem;
 	padding: 0 1rem;
 }
 
 #accueil {
-	height: 100%;
-	width: 100%;
+	height: 100vh;
+	width: 100vw;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: flex-end;
@@ -148,7 +148,7 @@ canvas {
 .line-home {
 	width: 2px;
 	height: 15vh;
-	background-color: #dfd3c3;;
+	background-color: #dfd3c3;
 	margin-top: 1rem;
 }
 
@@ -194,7 +194,6 @@ canvas {
 #about {
 	height: 100%;
 	width: 100%;
-	background-color: #161616;
 }
 
 .header {
@@ -244,7 +243,7 @@ canvas {
 	right: 20%;
 }
 
-.sentence {
+/* .sentence {
 	transition: all 0.7s ease-out 0s;
 	width: 100%;
 	display: flex;
@@ -254,33 +253,41 @@ canvas {
 	-webkit-box-pack: center;
 	justify-content: center;
 	color: rgb(223, 211, 195);
-	margin-bottom: 13%;
+	margin-top: 10%;
 	height: 100vh;
-}
+} */
 
-.sentence p {
+.sentence  {
+  margin: 10% auto;
 	font-size: 3vw;
 	font-weight: 700;
 	max-width: 1500px;
 	text-align: center;
 }
 
-.front {
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
-	flex-direction: column;
-	margin-left: 6%;
-}
-.front h2 {
+.stack {
 	width: 50%;
+	margin-left: 6%;
+  height: 150px;
+}
+
+.stack + .stack {
+  margin-top: 10rem;
+}
+
+.stack--back{
+  margin-right: 6%;
+  margin-left: auto;
+}
+
+.stack h2 {
 	font-size: 5vw;
 	font-weight: 900;
 	color: rgb(223, 211, 195);
 	text-align: center;
 }
 
-.front-top-line {
+.skills-header-line {
 	width: 100%;
 	height: 4px;
 	background: rgb(223, 211, 195);
@@ -288,6 +295,7 @@ canvas {
 	margin-bottom: 1.3vh;
 	margin-top: 1.3vh;
 }
+
 .skills-header {
 	font-weight: 900;
 	font-size: 1.99vw;
@@ -295,48 +303,32 @@ canvas {
 	color: #d0c5b6;
 }
 
-.front-end-content {
-	width: 50%;
-}
-
 .skills-content {
-	text-align: center;
-}
-.skills-content > p {
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	color: #dacebf;
+	justify-content: center;
+
 }
 
-.skills-content > p span {
+.skill {
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	padding: 10px;
-	color: #dacebf;
+
 }
 
-.skills-content > p img {
+.skill > p {
+	margin-left: 6%;
+}
+
+.skill > img {
 	height: 34px;
 	width: 34px;
 }
 
-.front-bottom-line {
-	width: 100%;
-	height: 4px;
-	background: rgb(223, 211, 195);
-	transition: width 0.5s ease 0s;
-	margin-bottom: 1.3vh;
-	margin-top: 1.3vh;
-}
+/* .back {
 
-.back {
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
-	flex-direction: column;
-	margin-right: 6%;
+	margin-right: 8%;
 }
 
 .back h2 {
@@ -378,16 +370,15 @@ canvas {
 	color: rgb(223, 211, 195);
 	text-align: center;
 	margin-top: 4rem;
-}
+} */
 
 /* Projects */
 #projects {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(4, 1fr);
-	height: 100%;
-	width: 100%;
-	background-color: #161616;
+	height: 100vh;
+	width: 100vw;
 }
 
 .projects-list {
@@ -455,8 +446,7 @@ canvas {
 	justify-content: center;
 	align-items: flex-end;
 	text-align: center;
-	background-color: #eee7e1;
-	margin-top: -5%;
+	background-color: rgb(223, 211, 195);
 	margin-left: 6%;
 	margin-right: 6%;
 }
@@ -623,8 +613,8 @@ canvas {
 }
 
 #contact {
-	height: 100%;
-	width: 100%;
+	height: 100vh;
+	width: 100vw;
 }
 
 .contact-content {
@@ -634,21 +624,20 @@ canvas {
 	justify-content: center;
 	align-items: flex-start;
 	flex-direction: column;
-
 }
 .contact-content h1 {
-  font-size: 8vw;
-  font-weight: 900;
-  margin-left: 6%;
-  z-index: 2;
+	font-size: 8vw;
+	font-weight: 900;
+	margin-left: 6%;
+	z-index: 2;
 }
 .contact-content p {
-  font-size: 1.5vw;
-  margin-left: 6%;
-  z-index: 2;
+	font-size: 1.5vw;
+	margin-left: 6%;
+	z-index: 2;
 }
-.mail{
-  text-decoration: underline;
+.mail {
+	text-decoration: underline;
 }
 /* Luger */
 
