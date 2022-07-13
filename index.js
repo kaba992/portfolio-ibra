@@ -1,3 +1,4 @@
+// Animation projets
 import { gsap } from "gsap";
 
 console.log(gsap);
@@ -11,6 +12,20 @@ const project4 = document.querySelector('.project-link-4');
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+    mobile: {
+      smooth: true
+    },
+    tablet: {
+      smooth: true,
+      breakpoint: 0,
+    },
+    multiplier: 0.75,
+
+  });
+  new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"))
 
 
   const tl = gsap.timeline();
@@ -18,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   project.forEach((item) => {
     item.addEventListener('mouseover', (e) => {
       e.stopPropagation();
-      tl.to(".projects-img", { duration: 1, width: "90%", ease: Expo.easeInOut,delay: 0.5 });
+      tl.to(".projects-img", { duration: 1, width: "90%", ease: Expo.easeInOut, delay: 0.5 });
       console.log('mouseover');
     })
     item.addEventListener('mouseout', (e) => {
@@ -53,3 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(projectImg.style.backgroundImage);
   })
 });
+// Animation heider
+const tlheader = gsap.timeline();
+tlheader.set(".project-header",{ opacity: 0, height: 0 });
+tlheader.to(".project-header", { duration: 1, opacity: 1, height: "80vh", ease: Back.easeOut });

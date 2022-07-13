@@ -2,7 +2,7 @@ import './style.css'
 import './luge.css'
 import './base.css'
 import './index.js'
-import './scrollTrigger.js'
+import './locomotive.min.js'
 import luge from '@waaark/luge'
 import { gsap } from "gsap";
 

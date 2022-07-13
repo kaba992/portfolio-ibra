@@ -81,7 +81,7 @@ canvas {
 	bottom: 0;
 	width: 6%;
 	height: 100vh;
-	padding-top: 20%;
+	padding-top: 23%;
 	padding-bottom: 30px;
 	flex-direction: column;
 	justify-content: space-between;
@@ -110,7 +110,6 @@ canvas {
 }
 
 .container-fluid {
-
 	height: 100%;
 	width: 100%;
 	padding: 0 1rem;
@@ -122,7 +121,7 @@ canvas {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: flex-end;
-	padding-bottom: 15rem;
+	padding-bottom: 10%;
 }
 
 .social {
@@ -177,7 +176,7 @@ canvas {
 }
 
 .menu-item {
-	font-size: 5rem;
+	font-size: 4.5vw;
 	font-family: "Grandstander", cursive;
 	padding: 15px;
 }
@@ -257,8 +256,8 @@ canvas {
 	height: 100vh;
 } */
 
-.sentence  {
-  margin: 10% auto;
+.sentence {
+	margin: 20% auto;
 	font-size: 3vw;
 	font-weight: 700;
 	max-width: 1500px;
@@ -268,16 +267,19 @@ canvas {
 .stack {
 	width: 50%;
 	margin-left: 6%;
-  height: 150px;
+}
+
+.deploiement {
+	height: 500px;
 }
 
 .stack + .stack {
-  margin-top: 10rem;
+	margin-top: 10rem;
 }
 
-.stack--back{
-  margin-right: 6%;
-  margin-left: auto;
+.stack--back {
+	margin-right: 6%;
+	margin-left: auto;
 }
 
 .stack h2 {
@@ -307,14 +309,22 @@ canvas {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
 
+.skill-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+	justify-content: center;
+	align-items: center;
 }
 
 .skill {
 	display: flex;
 	align-items: center;
 	padding: 10px;
-
+	justify-content: center;
+	width: 100%;
 }
 
 .skill > p {
@@ -441,7 +451,7 @@ canvas {
 	width: 100%;
 }
 .project-header {
-	height: 95vh;
+	height: 80vh;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
@@ -499,6 +509,7 @@ canvas {
 	font-weight: 700;
 	max-width: 1500px;
 	text-align: center;
+	width: 90%;
 }
 
 .projects-description {
