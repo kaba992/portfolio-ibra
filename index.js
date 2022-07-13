@@ -63,12 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(projectImg.style.backgroundImage);
   })
   project4.addEventListener('mouseover', (e) => {
-    projectImg.style.background = "url('/assets/projets/watch-list.PNG') no-repeat 50% 50%";
+    projectImg.style.background = "url('/assets/images/projets/watch-list.PNG') no-repeat 50% 50%";
     projectImg.style.backgroundSize = "cover";
     console.log(projectImg.style.backgroundImage);
   })
 });
 // Animation heider
 const tlheader = gsap.timeline();
-tlheader.set(".project-header",{ opacity: 0, height: 0 });
-tlheader.to(".project-header", { duration: 1, opacity: 1, height: "80vh", ease: Back.easeOut });
+const projectTitle = gsap.utils.toArray(document.querySelectorAll('.project-title'));
+tlheader.set(".project-header", { opacity: 0, height: 0 });
+tlheader.to(".project-header", { duration: 1, opacity: 1, height: "80vh", ease: Back.easeOut })
+  .fromTo(projectTitle, { duration: 1, opacity: 0, y: 100 }, { duration: 1.5, opacity: 1, y: 0, ease: Back.easeOut, stagger: 0.5 }
+  )

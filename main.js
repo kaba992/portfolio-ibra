@@ -3,7 +3,8 @@ import './luge.css'
 import './base.css'
 import './index.js'
 import './locomotive.min.js'
-import luge from '@waaark/luge'
+import './vite.config.js'
+
 import { gsap } from "gsap";
 
 console.log(gsap);

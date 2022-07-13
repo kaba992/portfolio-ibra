@@ -7,6 +7,19 @@
 	margin-top: 60px;
 }
 
+@font-face {
+  font-family: 'FuturaPTBold';
+  src:url('/assets/Fonts/FuturaPTBold/FuturaPTBold.woff') format('woff'),
+      url('/assets/Fonts/FuturaPTBold/FuturaPTBold.woff2') format('woff2'),
+      url('/assets/Fonts/FuturaPTBold/FuturaPTBold.eot'),
+      url('FuturaPTBold.eot?#iefix') format('embedded-opentype'),
+      url('/assets/Fonts/FuturaPTBold/FuturaPTBold.eot') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -32,7 +45,7 @@ a:active {
 h1,
 h2,
 h3 {
-	font-family: "Grandstander", cursive;
+  font-family: 'FuturaPTBold';
 	color: #dfd3c3;
 }
 
@@ -176,8 +189,8 @@ canvas {
 }
 
 .menu-item {
-	font-size: 4.5vw;
-	font-family: "Grandstander", cursive;
+	font-size: 3.8vw;
+  font-family: 'FuturaPTBold';
 	padding: 15px;
 }
 
@@ -336,68 +349,30 @@ canvas {
 	width: 34px;
 }
 
-/* .back {
-
-	margin-right: 8%;
-}
-
-.back h2 {
-	width: 50%;
-	font-size: 5vw;
-	font-weight: 900;
-	color: rgb(223, 211, 195);
-	text-align: center;
-	margin-top: 4rem;
-}
-
-.deployment {
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
-	flex-direction: column;
-	margin-left: 6%;
-}
-.deployment h2 {
-	margin-top: 4rem;
-	width: 50%;
-	font-size: 5vw;
-	font-weight: 900;
-	color: rgb(223, 211, 195);
-	text-align: center;
-}
-
-.volunteers {
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
-	flex-direction: column;
-	margin-right: 6%;
-}
-.volunteers h2 {
-	width: 50%;
-	font-size: 5vw;
-	font-weight: 900;
-	color: rgb(223, 211, 195);
-	text-align: center;
-	margin-top: 4rem;
-} */
 
 /* Projects */
 #projects {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(4, 1fr);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	height: 100vh;
 	width: 100vw;
 }
 
-.projects-list {
+.projects-right {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	grid-area: 1 / 3 / 5 / 5;
-}
 
+}
+.projets-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
 .project-item {
 	user-select: none;
 }
@@ -406,7 +381,7 @@ canvas {
 	padding-bottom: 2%;
 	color: rgb(223, 211, 195);
 	font-size: 7vw;
-	font-family: "Grandstander", cursive;
+  font-family: 'FuturaPTBold';
 	line-height: 1em;
 }
 
@@ -419,11 +394,9 @@ canvas {
 }
 
 .projects-img-wrapper {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	grid-area: 1 / 1 / 3 / 3;
+	width: 90%;
+	height: 400px;
+  margin-top: -18%;
 	margin-left: 6%;
 }
 
@@ -514,8 +487,8 @@ canvas {
 
 .projects-description {
 	width: 50%;
-	padding-top: 15%;
-	grid-area: 3 / 1 / 5 / 3;
+	padding-top: 9%;
+
 	margin: 0 auto;
 }
 .projects-description h2 {
@@ -527,17 +500,17 @@ canvas {
 
 .project-role {
 	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
+	justify-content: center;
+	align-items: center;
 	flex-direction: column;
-	width: 30%;
-	margin-left: 10%;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .project-role-right {
 	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
+	justify-content:center;
+	align-items: center;
 	flex-direction: column;
 	margin-right: 6%;
 	padding-bottom: 2.5rem;
@@ -563,6 +536,7 @@ canvas {
 	font-weight: 900;
 	color: rgb(223, 211, 195);
 	text-align: center;
+	width: 100%;
 }
 
 .project-role li {
