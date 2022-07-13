@@ -1,6 +1,6 @@
 import './style.css'
 import './luge.css'
-import './base.css'
+import './locomotive.css'
 import './index.js'
 import './locomotive.min.js'
 import './vite.config.js'
