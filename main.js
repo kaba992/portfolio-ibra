@@ -3,7 +3,7 @@ import './luge.css'
 import './locomotive.css'
 import './index.js'
 import './locomotive.min.js'
-import './vite.config.js'
+
 
 import { gsap } from "gsap";
 
