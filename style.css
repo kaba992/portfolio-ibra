@@ -8,22 +8,32 @@
 }
 
 @font-face {
-  font-family: 'FuturaPTBold';
-  src:url('/assets/Fonts/FuturaPTBold/FuturaPTBold.woff') format('woff'),
-      url('/assets/Fonts/FuturaPTBold/FuturaPTBold.woff2') format('woff2'),
-      url('/assets/Fonts/FuturaPTBold/FuturaPTBold.eot'),
-      url('FuturaPTBold.eot?#iefix') format('embedded-opentype'),
-      url('/assets/Fonts/FuturaPTBold/FuturaPTBold.eot') format('truetype');
+	font-family: "FuturaPTBold";
+	src: url("/assets/Fonts/FuturaPTBold/FuturaPTBold.woff") format("woff"),
+		url("/assets/Fonts/FuturaPTBold/FuturaPTBold.woff2") format("woff2"),
+		url("/assets/Fonts/FuturaPTBold/FuturaPTBold.eot"),
+		url("FuturaPTBold.eot?#iefix") format("embedded-opentype"),
+		url("/assets/Fonts/FuturaPTBold/FuturaPTBold.eot") format("truetype");
 
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+}
+
+header {
+	padding: 1rem;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
 }
 
 body {
@@ -45,7 +55,7 @@ a:active {
 h1,
 h2,
 h3 {
-  font-family: 'FuturaPTBold';
+	font-family: "FuturaPTBold";
 	color: #dfd3c3;
 }
 
@@ -84,6 +94,11 @@ canvas {
 	width: 100% !important;
 	height: 100% !important;
 	z-index: 1;
+}
+
+.hamburger {
+	height: 60px;
+	width: 60px;
 }
 
 .footer-left {
@@ -183,14 +198,14 @@ canvas {
 	padding-top: 0.5rem;
 }
 
-.menu {
+.menu-desktop {
 	margin-bottom: -40px;
 	z-index: 2;
 }
 
 .menu-item {
 	font-size: 3.8vw;
-  font-family: 'FuturaPTBold';
+	font-family: "FuturaPTBold";
 	padding: 15px;
 }
 
@@ -349,7 +364,6 @@ canvas {
 	width: 34px;
 }
 
-
 /* Projects */
 #projects {
 	display: flex;
@@ -363,15 +377,14 @@ canvas {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 }
-.projets-left{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
+.projets-left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
 }
 .project-item {
 	user-select: none;
@@ -381,8 +394,17 @@ canvas {
 	padding-bottom: 2%;
 	color: rgb(223, 211, 195);
 	font-size: 7vw;
-  font-family: 'FuturaPTBold';
+	font-family: "FuturaPTBold";
 	line-height: 1em;
+}
+
+.project-button {
+	width: 100%;
+}
+.project-button a{
+  border-bottom: 1px solid #161616;
+  width: fit-content;
+  padding-bottom: 3px;
 }
 
 .project-link:hover {
@@ -396,7 +418,7 @@ canvas {
 .projects-img-wrapper {
 	width: 90%;
 	height: 400px;
-  margin-top: -18%;
+	margin-top: -18%;
 	margin-left: 6%;
 }
 
@@ -509,7 +531,7 @@ canvas {
 
 .project-role-right {
 	display: flex;
-	justify-content:center;
+	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	margin-right: 6%;
@@ -659,4 +681,228 @@ canvas {
 
 .lg-preloader .is-hidden {
 	opacity: 0;
+}
+
+/* mobile menu */
+
+.menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(0, 0, 0);
+	visibility: hidden;
+	opacity: 0;
+	z-index: 1;
+}
+
+.navigation {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	text-align: center;
+}
+
+.mobile_menu_list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.mobile_menu_item {
+	width: 100%;
+}
+
+.mobile_menu_link {
+	font-size: 4rem !important;
+	color: #dfd3c3;
+	text-decoration: none;
+	font-family: "FuturaPTBold";
+	width: 100%;
+}
+
+@media (max-width: 414px) {
+	/* Home */
+	#canvas3d {
+		margin-top: -30px;
+	}
+	#canvas3d-2 {
+		margin-top: -30px;
+	}
+	.hamburger {
+		position: relative;
+		width: 7vw;
+		cursor: pointer;
+		z-index: 2;
+	}
+
+	.hamburger line {
+		stroke: #dfd3c3;
+		stroke-width: 6px;
+	}
+
+	.menu-desktop {
+		display: none;
+	}
+	.footer-left {
+		display: none;
+	}
+
+	#accueil {
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 20%;
+	}
+	.description {
+		margin-bottom: -20%;
+	}
+
+	/* About */
+
+	.header {
+		margin-top: 7rem;
+	}
+	.hello {
+		font-size: 4rem;
+	}
+	.ibra-img {
+		width: 90%;
+		height: 500px;
+	}
+	.front-end {
+		top: 60%;
+		left: 5px;
+		font-size: 3rem !important;
+	}
+	.developer {
+		position: absolute;
+		font-size: 3rem !important;
+		bottom: -8%;
+		right: 5px;
+	}
+	.sentence {
+		margin: 50% auto;
+		font-size: 1.5rem;
+	}
+	.stack {
+		width: 100%;
+		margin: 0;
+	}
+	.stack h2 {
+		font-size: 3.7rem;
+	}
+	.skills-header {
+		font-size: 1.5rem;
+	}
+
+	/* Projects */
+	#projects {
+		flex-direction: column-reverse;
+	}
+	.projets-left {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 300px;
+	}
+	.projects-right {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 300px;
+		width: 100%;
+	}
+	.project-link {
+		padding-bottom: 0;
+		color: rgb(223, 211, 195);
+		font-size: 3rem;
+		line-height: 1.5em;
+	}
+	.projects-description h2 {
+		font-size: 2rem;
+	}
+	.projects-description {
+		width: 50%;
+		padding: 20px;
+		margin: 0 auto;
+		width: 100%;
+	}
+	.projects-description p {
+		font-size: 1.5rem;
+	}
+	/* contact */
+	.contact-content h1 {
+		font-size: 5rem;
+	}
+	.contact-content p {
+		font-size: 1.5rem;
+	}
+
+	/* project */
+	.project-header-content h1 {
+		font-size: 3.5rem;
+	}
+	.project-header-content p {
+		font-size: 1.5rem;
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+
+	.project-content-description {
+		height: 70vh;
+	}
+	.project-content-description p {
+		font-size: 1.2rem;
+	}
+
+	.project-role h2 {
+		font-size: 4rem;
+	}
+
+	.project-role li {
+		font-size: 1.5rem;
+	}
+	.project-img-wrapper img {
+		width: 100%;
+	}
+	.project-img-wrapper video {
+		width: 100%;
+	}
+	.project-img-wrapper p {
+		font-size: 1rem;
+	}
+	.project-role-right h2 {
+		font-size: 4rem;
+	}
+	.project-role-right li {
+		font-size: 1rem;
+		text-align: center;
+	}
+	.project-header-content svg {
+		height: 90%;
+		width: 90%;
+		margin-bottom: 1rem;
+	}
+
+	.project-img-wrapper-neghborfood img {
+		width: 90%;
+		height: 667px;
+	}
+	.project-img-wrapper-neghborfood p {
+		font-size: 1.2rem;
+	}
+	.project-img-wrapper-neghborfood video {
+		width: 20%;
+		height: 812px;
+		display: block;
+		margin: 2rem auto;
+	}
 }
