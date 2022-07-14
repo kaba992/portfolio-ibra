@@ -15,8 +15,8 @@ export default defineConfig({
         "neighborfood": resolve(__dirname, 'pages/project/neighborfood.html'),
         "watch-list": resolve(__dirname, 'pages/project/watch-list.html'),
         "poke-810": resolve(__dirname, 'pages/project/poke-810.html'),
-
       }
+
     }
   }
 })

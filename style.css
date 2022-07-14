@@ -42,6 +42,7 @@ body {
 	color: #dfd3c3;
 	background-color: #1c1a1a;
 	font-family: "Inter", sans-serif;
+  overflow: hidden;
 }
 
 a,
@@ -150,6 +151,7 @@ canvas {
 	justify-content: space-evenly;
 	align-items: flex-end;
 	padding-bottom: 10%;
+  overflow: hidden;
 }
 
 .social {
@@ -318,12 +320,13 @@ canvas {
 }
 
 .skills-header-line {
-	width: 100%;
+	width: 0;
 	height: 4px;
 	background: rgb(223, 211, 195);
 	transition: width 0.5s ease 0s;
 	margin-bottom: 1.3vh;
 	margin-top: 1.3vh;
+  transition: width 2s ease 0s;
 }
 
 .skills-header {
@@ -401,10 +404,10 @@ canvas {
 .project-button {
 	width: 100%;
 }
-.project-button a{
-  border-bottom: 1px solid #161616;
-  width: fit-content;
-  padding-bottom: 3px;
+.project-button a {
+	border-bottom: 1px solid #161616;
+	width: fit-content;
+	padding-bottom: 3px;
 }
 
 .project-link:hover {
@@ -578,8 +581,8 @@ canvas {
 	margin: 0 auto;
 }
 .project-img-wrapper-neghborfood img {
-	width: 20%;
-	height: 812px;
+	width: 60%;
+	height: auto;
 	display: block;
 	margin: 2rem auto;
 }
@@ -727,6 +730,11 @@ canvas {
 	font-family: "FuturaPTBold";
 	width: 100%;
 }
+
+.about-line{
+  width: 100%;
+}
+
 
 @media (max-width: 414px) {
 	/* Home */
@@ -894,14 +902,14 @@ canvas {
 
 	.project-img-wrapper-neghborfood img {
 		width: 90%;
-		height: 667px;
+		height: auto;
 	}
 	.project-img-wrapper-neghborfood p {
 		font-size: 1.2rem;
 	}
 	.project-img-wrapper-neghborfood video {
-		width: 20%;
-		height: 812px;
+		width: 80%;
+		height: 612px;
 		display: block;
 		margin: 2rem auto;
 	}

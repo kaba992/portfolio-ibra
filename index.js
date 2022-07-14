@@ -1,7 +1,13 @@
 // Animation projets
 import { gsap } from "gsap";
 import LocomotiveScroll from 'locomotive-scroll';
-console.log(gsap);
+import poke from "./assets/images/project1.png"
+import neighborfood from "/assets/images/project2.png"
+import bits from "./assets/images/project3.png";
+import watch from "./assets/images/project4.png";
+
+console.log(poke);
+
 const project = document.querySelectorAll('.project-link');
 const projectImg = document.querySelector('.projects-img');
 const project1 = document.querySelector('.project-link-1');
@@ -16,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     el: document.querySelector("[data-scroll-container]"),
     smooth: true,
     mobile: {
-      smooth: true
+      smooth: true,
+      multiplier: 0.75
     },
     tablet: {
       smooth: true,
@@ -36,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tl.fromTo(".projects-img", { duration: 0.5, width: 0, ease: Back.easeOut }, { duration: 0.5, width: "90%", ease: Back.easeOut });
 
       // console.log(e.target.dataset);
-      // projectImg.style.background = `url("/assets/images/projets/${e.target.dataset.bgImage}")`;
+      // projectImg.style.background = `url("/assets/images/${e.target.dataset.bgImage}")`;
 
       // projectImg.style.backgroundSize = "cover";
     })
@@ -50,24 +57,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   project1.addEventListener('mouseover', (e) => {
-    projectImg.style.background = "url('/assets/images/projets/Capture.PNG') no-repeat 50% 50%";
+    projectImg.style.background = `url('${poke}') no-repeat 50% 50%`;
     projectImg.style.backgroundSize = "cover";
 
   })
 
   project2.addEventListener('mouseover', (e) => {
-    projectImg.style.background = "url('/assets/images/projets/neighborfood.png') no-repeat 50% 50%";
+    projectImg.style.background = `url('${neighborfood}') no-repeat 50% 50%`;
     // projectImg.style.backgroundSize = "cover";
     console.log(projectImg.style.backgroundImage);
   })
 
   project3.addEventListener('mouseover', (e) => {
-    projectImg.style.background = "url('/assets/images/projets/32-bits.PNG') no-repeat 50% 50%";
+    projectImg.style.background = `url('${bits}') no-repeat 50% 50%`;
     projectImg.style.backgroundSize = "cover";
     console.log(projectImg.style.backgroundImage);
   })
   project4.addEventListener('mouseover', (e) => {
-    projectImg.style.background = "url('/assets/images/projets/watch-list.PNG') no-repeat 50% 50%";
+    projectImg.style.background = `url('${watch}') no-repeat 50% 50%`;
     projectImg.style.backgroundSize = "cover";
     console.log(projectImg.style.backgroundImage);
   })
@@ -79,30 +86,10 @@ tlheader.set(".project-header", { opacity: 0, height: 0 });
 tlheader.to(".project-header", { duration: 1, opacity: 1, height: "80vh", ease: Back.easeOut })
   .fromTo(projectTitle, { duration: 1, opacity: 0, y: 100 }, { duration: 1.5, opacity: 1, y: 0, ease: Back.easeOut, stagger: 0.5 }
   )
-// scroll-trigger
-gsap.registerPlugin(ScrollTrigger);
-const lines = gsap.utils.toArray(document.querySelectorAll('.skills-header-line'));
-const tlAbout = gsap.timeline();
-
-lines.forEach((line) => {
-
-  tlAbout.set(line, { width: 0 });
-  tlAbout.to(line, {
-    duration: 3, width: "100%", ease: "linear", stagger: 0.5,
-
-    scrollTrigger: {
-      trigger: ".stack",
-      markers: true,
-      start: "top 75%",
-      end: "bottom 25%"
-    }
-
-  })
-  console.log(line);
-})
-
-
-
+// line home
+const tlLine = gsap.timeline();
+tlLine.fromTo(".line-home-home", { duration: 1, opacity: 0, height: 0 }, { duration: 1.5, opacity: 1, height: "15vh", ease: Back.easeOut, delay: 3.2 })
+tlLine.fromTo(".line-home", { duration: 1, opacity: 0, height: 0 }, { duration: 1.5, opacity: 1, height: "15vh", ease: Back.easeOut }, "<-=3>")
 
 
 
