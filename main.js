@@ -31,4 +31,3 @@ app.load('https://prod.spline.design/n47SWpCNFv0OPbN6/scene.splinecode');
 const canvasContact = document.getElementById('canvas3d-2');
 const appContact = new Application(canvasContact);
 appContact.load('https://prod.spline.design/MhGQIm2Y3yWRRD-C/scene.splinecode');
-
