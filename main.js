@@ -6,9 +6,6 @@ import './index.js'
 
 
 import { gsap } from "gsap";
-
-console.log(gsap);
-console.log(luge);
 luge.settings({ preloader: { duration: 3 } });
 luge.settings({ loader: { duration: 1.5 } });
 

@@ -2,7 +2,7 @@
 import { gsap } from "gsap";
 import LocomotiveScroll from 'locomotive-scroll';
 console.log(gsap);
-const project = document.querySelectorAll('.project-item');
+const project = document.querySelectorAll('.project-link');
 const projectImg = document.querySelector('.projects-img');
 const project1 = document.querySelector('.project-link-1');
 const project2 = document.querySelector('.project-link-2');
@@ -29,17 +29,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const tl = gsap.timeline();
-  tl.set(".projects-img", { width: 0 });
   project.forEach((item) => {
+
     item.addEventListener('mouseover', (e) => {
-      e.stopPropagation();
-      tl.to(".projects-img", { duration: 1, width: "90%", ease: Expo.easeInOut, delay: 0.5 });
-      console.log('mouseover');
+
+      tl.fromTo(".projects-img", { duration: 0.5, width: 0, ease: Back.easeOut }, { duration: 0.5, width: "90%", ease: Back.easeOut });
+
+      // console.log(e.target.dataset);
+      // projectImg.style.background = `url("/assets/images/projets/${e.target.dataset.bgImage}")`;
+
+      // projectImg.style.backgroundSize = "cover";
     })
     item.addEventListener('mouseout', (e) => {
-      e.stopPropagation();
-      tl.to(".projects-img", { duration: 0.5, width: 0, ease: Expo.easeInOut });
-      console.log('mouseout');
+
+      tl.fromTo(".projects-img", { duration: 0.5, width: "90%", ease: Back.easeOut }, { duration: 0.5, width: 0, ease: Back.easeOut });
+
     })
   });
 
@@ -48,11 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
   project1.addEventListener('mouseover', (e) => {
     projectImg.style.background = "url('/assets/images/projets/Capture.PNG') no-repeat 50% 50%";
     projectImg.style.backgroundSize = "cover";
-    console.log('hovered');
+
   })
 
   project2.addEventListener('mouseover', (e) => {
-    projectImg.style.background = "url('/assets/images/projets/neighborfood.PNG') no-repeat 50% 50%";
+    projectImg.style.background = "url('/assets/images/projets/neighborfood.png') no-repeat 50% 50%";
     // projectImg.style.backgroundSize = "cover";
     console.log(projectImg.style.backgroundImage);
   })
@@ -84,10 +88,10 @@ lines.forEach((line) => {
 
   tlAbout.set(line, { width: 0 });
   tlAbout.to(line, {
-    duration:3, width:"100%", ease: "linear",stagger:0.5,
+    duration: 3, width: "100%", ease: "linear", stagger: 0.5,
 
     scrollTrigger: {
-      trigger: line,
+      trigger: ".stack",
       markers: true,
       start: "top 75%",
       end: "bottom 25%"
