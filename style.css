@@ -34,7 +34,6 @@ header {
 	display: flex;
 	width: 100%;
 	justify-content: flex-end;
-
 }
 
 body {
@@ -256,7 +255,8 @@ canvas {
 .ibra-img:hover {
 	filter: grayscale(0%);
 	transform: scale(1.1);
-	background: url("/assets/images/ibra_wagon.jpg") no-repeat right center/ cover;
+	background: url("/assets/images/ibra_wagon.jpg") no-repeat center center/
+		cover;
 }
 
 .front-end {
@@ -273,14 +273,12 @@ canvas {
 	right: 20%;
 }
 
-
-
 .sentence {
 	margin: 20% auto;
 	font-size: 3vw;
 	font-weight: 700;
 	max-width: 1500px;
-  width: 90%;
+	width: 90%;
 	text-align: center;
 }
 
@@ -330,7 +328,7 @@ canvas {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-  flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 .skill-wrapper {
@@ -373,7 +371,7 @@ canvas {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  margin-bottom: -60px;
+	margin-bottom: -60px;
 }
 .projets-left {
 	display: flex;
@@ -422,8 +420,6 @@ canvas {
 .projects-img {
 	height: 100%;
 	width: 0;
-	/* background: url(./assets/images/projets/Capture.PNG) no-repeat 50% 50%;
-	background-size: cover; */
 	overflow: hidden;
 }
 
@@ -441,7 +437,7 @@ canvas {
 #poke-810 {
 	height: 100%;
 	width: 100%;
-  overflow: hidden;
+	overflow: hidden;
 }
 .project-header {
 	height: 80vh;
@@ -638,6 +634,7 @@ canvas {
 }
 .contact-content p {
 	font-size: 1.5vw;
+	width: 40%;
 	margin-left: 6%;
 	z-index: 2;
 }
@@ -761,13 +758,12 @@ canvas {
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 20%;
-    width: 100%;
+		width: 100%;
 	}
 
-  #contact {
-
-    width: 100%;
-}
+	#contact {
+		width: 100%;
+	}
 	.description {
 		margin-bottom: -20%;
 	}
@@ -783,7 +779,7 @@ canvas {
 	.ibra-img {
 		width: 90%;
 		height: 500px;
-    pointer-events: none;
+		pointer-events: none;
 	}
 	.front-end {
 		top: 60%;
@@ -848,11 +844,16 @@ canvas {
 		font-size: 1.5rem;
 	}
 	/* contact */
+
+	.contact-content {
+		margin-left: -5%;
+	}
 	.contact-content h1 {
 		font-size: 5rem;
 	}
 	.contact-content p {
 		font-size: 1.5rem;
+		width: 100%;
 	}
 
 	/* project */

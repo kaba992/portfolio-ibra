@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       tl.fromTo(".projects-img", { duration: 0.5, width: 0, ease: Back.easeOut }, { duration: 0.5, width: "90%", ease: Back.easeOut });
 
-      // console.log(e.target.dataset);
-      // projectImg.style.background = `url("/assets/images/${e.target.dataset.bgImage}")`;
+      // console.log(e.target.dataset.image);
+      // projectImg.style.background = `url("/assets/images/${e.target.dataset.image}") no-repeat 50% 50%`;
 
       // projectImg.style.backgroundSize = "cover";
     })
