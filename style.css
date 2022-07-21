@@ -58,6 +58,8 @@ h2,
 h3 {
 	font-family: "FuturaPTBold";
 	color: #dfd3c3;
+  mix-blend-mode: difference;
+
 }
 
 p,
@@ -280,6 +282,7 @@ canvas {
 	max-width: 1500px;
 	width: 90%;
 	text-align: center;
+  transition: transform 1s ease-in-out;
 }
 
 .stack {
@@ -725,6 +728,16 @@ canvas {
 
 .about-line {
 	width: 100%;
+}
+
+.block{
+  display: inline-block;
+  transform: translateY(100px);
+  transition: transform 1s ease-in-out;
+}
+
+.block-top {
+  transform: translateY(-100px);
 }
 
 @media (max-width: 414px) {
