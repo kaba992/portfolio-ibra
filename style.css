@@ -58,7 +58,6 @@ h2,
 h3 {
 	font-family: "FuturaPTBold";
 	color: #dfd3c3;
-  mix-blend-mode: difference;
 
 }
 
@@ -494,6 +493,8 @@ canvas {
 	justify-content: center;
 	color: rgb(223, 211, 195);
 	/* margin-bottom: 6%; */
+  margin-top: 26%;
+
 	height: 100vh;
 }
 .project-content-description p {
