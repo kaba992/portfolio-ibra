@@ -54,30 +54,40 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   });
 
+  if (project1) {
+    project1.addEventListener('mouseover', (e) => {
+      projectImg.style.background = `url('${poke}') no-repeat 50% 50%`;
+      projectImg.style.backgroundSize = "cover";
+
+    })
+  }
+
+  if (project2) {
+
+    project2.addEventListener('mouseover', (e) => {
+      projectImg.style.background = `url('${neighborfood}') no-repeat 50% 50%`;
+      // projectImg.style.backgroundSize = "cover";
+      console.log(projectImg.style.backgroundImage);
+    })
+  }
+
+  if (project3) {
+    project3.addEventListener('mouseover', (e) => {
+      projectImg.style.background = `url('${bits}') no-repeat 50% 50%`;
+      projectImg.style.backgroundSize = "cover";
+      console.log(projectImg.style.backgroundImage);
+    })
+  }
+
+  if (project4) {
+    project4.addEventListener('mouseover', (e) => {
+      projectImg.style.background = `url('${watch}') no-repeat 50% 50%`;
+      projectImg.style.backgroundSize = "cover";
+      console.log(projectImg.style.backgroundImage);
+    })
+  }
 
 
-  project1.addEventListener('mouseover', (e) => {
-    projectImg.style.background = `url('${poke}') no-repeat 50% 50%`;
-    projectImg.style.backgroundSize = "cover";
-
-  })
-
-  project2.addEventListener('mouseover', (e) => {
-    projectImg.style.background = `url('${neighborfood}') no-repeat 50% 50%`;
-    // projectImg.style.backgroundSize = "cover";
-    console.log(projectImg.style.backgroundImage);
-  })
-
-  project3.addEventListener('mouseover', (e) => {
-    projectImg.style.background = `url('${bits}') no-repeat 50% 50%`;
-    projectImg.style.backgroundSize = "cover";
-    console.log(projectImg.style.backgroundImage);
-  })
-  project4.addEventListener('mouseover', (e) => {
-    projectImg.style.background = `url('${watch}') no-repeat 50% 50%`;
-    projectImg.style.backgroundSize = "cover";
-    console.log(projectImg.style.backgroundImage);
-  })
 });
 // Animation heider
 const tlheader = gsap.timeline();

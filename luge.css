@@ -584,3 +584,8 @@ html.lg-cursor-hide * {
 		margin-top: -30px;
 	}
 }
+
+.lg-cursor--hover--about .lg-cursor-pointer:before{
+  /* content:"🧑🏿" !important; */
+  background-color: purple;
+  }
